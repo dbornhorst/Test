@@ -58,13 +58,18 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-/* USER CODE BEGIN Private defines */
 #define FREAK_Pin GPIO_PIN_0
 #define FREAK_GPIO_Port GPIOA
+#define EXT1_5_Pin GPIO_PIN_1
+#define EXT1_5_GPIO_Port GPIOA
+#define EXT1_6_Pin GPIO_PIN_2
+#define EXT1_6_GPIO_Port GPIOA
 #define STAT1_Pin GPIO_PIN_6
 #define STAT1_GPIO_Port GPIOC
 #define STAT2_Pin GPIO_PIN_7
 #define STAT2_GPIO_Port GPIOC
+/* USER CODE BEGIN Private defines */
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
