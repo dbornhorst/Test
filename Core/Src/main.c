@@ -241,7 +241,7 @@ void TaskButton_init(void const * argument)
 			//osDelay(100);
 			vTaskDelay(30 / portTICK_PERIOD_MS);
 		}
-		vTaskDelay(10 / portTICK_PERIOD_MS);
+		//vTaskDelay(10 / portTICK_PERIOD_MS);
 	}
 }
 /* USER CODE END 4 */
