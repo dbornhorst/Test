@@ -121,6 +121,8 @@ int main(void)
 
   osThreadDef(TaskButton, TaskButton_init, osPriorityNormal,0, 128);
   TaskButtonHandle = osThreadCreate(osThread(TaskButton), NULL);
+
+  HAL_GPIO_WritePin(GPIOA, EXT1_5_Pin|EXT1_6_Pin, GPIO_PIN_SET);
   /* USER CODE END RTOS_THREADS */
 
   /* Start scheduler */
@@ -271,9 +273,10 @@ void StartDefaultTask(void const * argument)
   for(;;)
 	{
 		HAL_GPIO_TogglePin(GPIOC, STAT1_Pin|STAT2_Pin);
+    HAL_GPIO_TogglePin(GPIOA, EXT1_5_Pin|EXT1_6_Pin);
 		//HAL_Delay(250);
 		//osDelay(250);
-		vTaskDelay(250 / portTICK_PERIOD_MS);
+		vTaskDelay(2000 / portTICK_PERIOD_MS);
 	}
   /* USER CODE END 5 */
 }
